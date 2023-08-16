@@ -1,0 +1,6 @@
+"""
+Schema for entire GraphQL project
+"""
+type Query {
+  hello: String
+}
