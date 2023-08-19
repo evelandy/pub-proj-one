@@ -1,6 +1,34 @@
 """
 Schema for entire GraphQL project
 """
+
 type Query {
-  hello: String
+  user(id: ID): Employee
+  users: [Employee]
 }
+
+type Employee {
+  id: ID
+  userID: Int
+  name: String
+  title: String
+  admin: Boolean
+}
+
+# type Query {
+#   user(id: ID): User
+#   users: [User]
+# }
+
+# type User {
+#   id: ID
+#   name: String
+#   email: String
+#   age: Int
+# }
+
+# type Mutation {
+#   createUser(id: ID, name: String, email: String, age: Int): User
+#   updateUser(id: ID, name: String, email: String, age: Int): User
+#   deleteUser(id: ID): User
+# }
